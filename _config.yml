@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 1
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -109,3 +109,7 @@ mermaid: ## mermaid url https://github.com/knsv/mermaid
   version: "10.9.0" # default v7.1.2
   options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
     #startOnload: true  // default true
+
+marked:
+  prependRoot: true
+  postAsset: true

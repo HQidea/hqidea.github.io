@@ -47,7 +47,7 @@ RPA全称Robotic Process Automation，中文名机器人流程自动化，使用
 
 + 兼具定位和控制的协议/工具
   + WebDriver: 由Selenium推动的浏览器控制协议，被大多数浏览器接受，主要工具有Selenium、WebdriverIO，而[Appium](https://blog.hqhome.net/posts/appium/)将自动化的对象由浏览器扩展到了桌面和移动设备
-  + CDP(Chrome Devtools Protocol)：类Chromium浏览器的调试协议，可以实现检查、调试、控制等功能，主要工具有Puppeteer
+  + CDP(Chrome Devtools Protocol)：类Chromium浏览器的调试协议，可以实现检查、调试、控制等功能，主要工具有[Puppeteer](https://blog.hqhome.net/posts/puppeteer/)
   + WebDriver-BIDI：由于WebDriver效率较低，且不支持低级别的控制；CDP只能在类Chromium浏览器中使用，因此WebDriver-BIDI吸取了前两个协议的优点，设计了一套面向未来的自动化标准，支持高效传输、低级别的控制和跨浏览器兼容
   + Win32 API: Windows操作系统的底层API
 + 额外的定位方式

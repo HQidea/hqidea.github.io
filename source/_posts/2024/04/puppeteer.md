@@ -76,7 +76,7 @@ const browser = await puppeteer.launch({headless: false});
 
 旧的无头浏览器虽然存在一些问题，但是由于不依赖X11/Wayland, D-Bus等框架，它的性能会比Chrome更出色，因此在一些自动截屏、网页抓取等场景下仍具有一定的优势。
 
-## 示例
+## 使用示例
 
 + 在`https://developer.chrome.com/`中搜索"automate beyond recorder"，点击第一个结果，然后在终端中打印标题。
 

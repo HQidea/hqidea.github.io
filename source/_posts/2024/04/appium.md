@@ -108,7 +108,7 @@ appium
     ```
     安装完之后需要重启appium
 + 运行安卓模拟器
-![alt text](image.png)
+![](image.png)
   + 创建一个模拟器并运行
 + 编写Appium client
   ```
@@ -149,7 +149,7 @@ appium
   unknown error: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
   ```
   可以尝试关闭模拟器后，使用"Cold Boot"重新启动
-  ![alt text](image-2.png)
+  ![](image-2.png)
 
 ## 概念
 

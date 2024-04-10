@@ -23,7 +23,7 @@ ComfyUI是一个强大的模块化stable diffusion图形化界面和后端服务
 2. 特征向量和一张随机噪声图（如电子雪花图）一起放入Image Information Creator中，Creator将特征向量和噪声图转换到一个潜在空间内，然后根据特征向量将噪声图进行降噪
 3. 降噪后的结果会被Image Decoder解码成一张图片
 
-![alt text](image.png)
+![](image.png)
 
 > 整个过程，与其说 AI 是在「生成」图片，不如称其为「雕刻」更合适。就像米开朗基罗在完成大卫雕像后，说过的一句话那样：雕像本来就在石头里，我只是把不要的部分去掉。
 
@@ -44,9 +44,9 @@ Image Information Creator做的事情就是将一张充满噪点的图片去除�
 ## GUI
 
 理解了上面的概念和原理之后，就很容易看懂ComfyUI的界面了：
-![alt text](image-1.png)
+![](image-1.png)
 还是有些疑惑？那我们把界面整理一下：
-![alt text](image-3.png)
+![](image-3.png)
 这样是不是就明白了
 
 GUI中还有2个在原理中未涉及到的节点：

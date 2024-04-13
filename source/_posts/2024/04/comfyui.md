@@ -13,7 +13,7 @@ ComfyUI是一个强大的模块化stable diffusion图形化界面和后端服务
   + safetensors：仅包含模型的参数，加载安全性好，速度快
   + ckpt：除了模型参数外，还包含训练过程中的优化器状态，相当于训练快照，可以用于恢复训练，但是体积较大且存在安全风险
 + VAE（Variational Auto Encoder，变分自编码器）：将图片编码成潜在空间以及将潜在空间解码成图片
-+ LoRA(Low-Rank Adaptation of Large Language Models, 大语言模型的低秩自适应)：最初为大语言模型设计，在不修改大模型各层参数的前提下，在各层之间注入可训练的层，类似在两个函数之间做参数转换，大大降低了大模型微调的训练量，后来也应用到Stable diffusion模型中
++ LoRA(Low-Rank Adaptation of Large Language Models, 大语言模型的低秩自适应)：最初为大语言模型设计，<s>在不修改大模型各层参数的前提下，在各层之间注入可训练的层，类似在两个函数之间做参数转换，</s>(删除的文字介绍的是另一种名为Adapter的微调方式)，LoRA的数学原理是一个大矩阵是可以通过两个小矩阵计算所得，通过调整小矩阵中的参数即可生成原来大矩阵的结果，而小矩阵的参数远远小于大矩阵，从而大大降低了大模型微调的训练量，后来也应用到Stable diffusion模型中
 
 ## 原理
 
@@ -66,3 +66,4 @@ Text Encoder分为正向prompt和负向prompt，在正向prompt列出你希望�
 + https://comfyui.jpanda.cn/
 + https://www.comflowy.com/zh-CN/basics/stable-diffusion-foundation
 + https://zhuanlan.zhihu.com/p/619247417
++ https://blog.csdn.net/qq_40909212/article/details/135228838

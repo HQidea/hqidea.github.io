@@ -147,6 +147,7 @@ Handler可以由单个或者多个的进程或者线程实现，因此排列组�
 [^5]: https://pdai.tech/md/java/io/java-io-model.html
 [^6]: https://twdev.blog/2024/12/asyncio/
 [^7]: https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf
+[^8]: https://xiaolincoding.com/os/8_network_system/reactor.html
 
 
 

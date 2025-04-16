@@ -48,7 +48,7 @@ IO主要被分为两个阶段：
 
 这上述的这些模型中，实际应用最多的是IO多路复用（I/O Multiplexing）。
 
-### Reactor/Proactor
+### Reactor[^8]
 
 我们前面介绍了IO多路复用有2个步骤，第一个步骤是请求多个IO，第二个步骤是针对其中就绪的IO进行操作。基于这个模型，Douglas C. Schmidt提出了Reactor范式[^7]，把IO多路复用的2个步骤抽象为了Reactor（Dispatcher）和Handler两个组件。
 
@@ -84,59 +84,11 @@ Reactor和Handler分别可以有一个或者多个，由于不同语言的特性
 
   ![](mrmh.png)
 
+  单Reactor多Handler的实现中，由多进程/线程实现的Handler可以充分利用多核CPU的性能。同样地Reactor也可以被设计为使用多进程/线程来提升性能。主Reactor负责监听IO连接事件，建立连接后这个IO被交给子Reactor监听操作事件。
 
-
-
-
-
-
-
-
-Handler可以由单个或者多个的进程或者线程实现，因此排列组合后，
-
-
-
-
-
-
-+ 异步IO：
-
-如果被请求的所有IO，和阻塞IO一样，执行单元进入休眠状态；当其中任意一个IO完成阶段1后，执行单元被唤醒，
-
-
-
-进入阶段2，同样的在阶段2中执行单元还是会进入休眠状态。但是要注意的是，如果IO被设置为阻塞，只要能读到一个字节，就就会进入阶段2，同时，如果IO被设置为非阻塞，
-
-
-
-  + 说明：在IO多路复用的描述中，我没有使用“完成阶段1”的描述，而说的是“就绪”。这是因为，根据IO被设置为阻塞或者非阻塞，就绪的
-
-
-
-
-
-，则执行单元进入休眠状态，当其中任一一个IO完成
-
-
-### 异步IO
-
-
-
-其中3种是同步的，2种是异步的。4种同步的IO模型又可以分为阻塞和非阻塞。
-
-![](image.png)
-
-
-
-### 阻塞式IO
-
-### 非阻塞式IO
-
-### IO复用
-
-### 信号驱动IO
-
-### 异步IO
+  + 优点：
+    + 相较于单Reactor多Handler可以进一步利用多核CPU提升性能
+  + 案例：Netty、Nginx
 
 ## References
 
@@ -148,7 +100,3 @@ Handler可以由单个或者多个的进程或者线程实现，因此排列组�
 [^6]: https://twdev.blog/2024/12/asyncio/
 [^7]: https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf
 [^8]: https://xiaolincoding.com/os/8_network_system/reactor.html
-
-
-
-https://www.cnblogs.com/loveer/p/11479249.html

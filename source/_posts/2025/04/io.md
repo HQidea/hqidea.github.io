@@ -10,7 +10,7 @@ IO, 全称Input/Output，是信息处理系统与外部世界进行通信的过�
 
 阻塞/非阻塞与同步/异步是两组不同视角的概念，既有关联，又不完全一样。
 
-+ 阻塞/非阻塞：阻塞指的是在资源（数据、锁等）未就绪时，当前执行单元（进程、线程）进入休眠状态（Sleeping State）[^2]，直到资源就绪后，操作系统会唤醒当前执行单元继续往下执行。非阻塞是即使在资源未就绪的时候，执行单元也不会进入休眠状态，因此可以执行其他任务，具体怎么实现的后面会解释。
++ 阻塞/非阻塞：阻塞指的是在资源（数据、锁等）未就绪时，当前执行单元（进程、线程）进入休眠状态（Sleeping State）[^2]，直到资源就绪后，操作系统会唤醒当前执行单元继续往下执行。非阻塞是即使在资源未就绪的时候，执行单元也不会进入休眠状态，因此可以执行其他任务。
 
 思考：Java的线程在等待IO时，是什么状态？
 
@@ -48,7 +48,7 @@ IO主要被分为两个阶段：
 
 这上述的这些模型中，实际应用最多的是IO多路复用（I/O Multiplexing）。
 
-### Reactor[^8]
+### Reactor
 
 我们前面介绍了IO多路复用有2个步骤，第一个步骤是请求多个IO，第二个步骤是针对其中就绪的IO进行操作。基于这个模型，Douglas C. Schmidt提出了Reactor范式[^7]，把IO多路复用的2个步骤抽象为了Reactor（Dispatcher）和Handler两个组件。
 
@@ -92,11 +92,11 @@ Reactor和Handler分别可以有一个或者多个，由于不同语言的特性
 
 ## References
 
-[^1]: https://en.wikipedia.org/wiki/Input/output
-[^2]: https://www.baeldung.com/linux/process-states
-[^3]: https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SocketChannel.html
-[^4]: https://stackoverflow.com/questions/18401428/how-to-check-whether-read-system-call-has-read-entire-data-or-not
-[^5]: https://pdai.tech/md/java/io/java-io-model.html
-[^6]: https://twdev.blog/2024/12/asyncio/
-[^7]: https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf
-[^8]: https://xiaolincoding.com/os/8_network_system/reactor.html
+[^1]: <https://en.wikipedia.org/wiki/Input/output>
+[^2]: <https://www.baeldung.com/linux/process-states>
+[^3]: <https://docs.oracle.com/javase/8/docs/api/java/nio/channels/SocketChannel.html>
+[^4]: <https://stackoverflow.com/questions/18401428/how-to-check-whether-read-system-call-has-read-entire-data-or-not>
+[^5]: <https://pdai.tech/md/java/io/java-io-model.html>
+[^6]: <https://twdev.blog/2024/12/asyncio/>
+[^7]: <https://www.dre.vanderbilt.edu/~schmidt/PDF/reactor-siemens.pdf>
+[^8]: <https://xiaolincoding.com/os/8_network_system/reactor.html>

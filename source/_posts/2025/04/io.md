@@ -88,7 +88,7 @@ Reactor和Handler分别可以有一个或者多个，在不同语言中，可以
 
   + 优点：
     + 相较于单Reactor多Handler可以进一步利用多核CPU提升性能
-  + 案例：Netty、Nginx
+  + 案例：Netty（线程）、Nginx（进程）
 
 ## References
 

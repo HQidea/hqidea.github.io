@@ -69,7 +69,7 @@ Reactor和Handler分别可以有一个或者多个，在不同语言中，可以
   + 缺点：
     + 无法利用多核CPU
     + 如果某个Handler耗时较高，则会影响整体性能
-  + 案例：Redis
+  + 案例：Redis、Node.js
 
 + 单Reactor多Handler
 
